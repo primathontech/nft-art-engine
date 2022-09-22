@@ -10,14 +10,14 @@
  * Credits:
  * Metaplex.js util by https://github.com/DawidAbram
  */
-const NFTName = "NameOfNFT" //This is the name there will be showen on your NFTs !!! Name can at max be 32 characters !!!
-const collectionName = "PROJECT_NAME"; //This is used if mutiple collection is needed
-const collectionFamily = "PROJECT_FAMILY"; // Many projects can belong to one family
-const symbol = "PRJSMBL"; // !!! Symbol can at max be 10 characters !!!
+const NFTName = "First Man" //This is the name there will be showen on your NFTs !!! Name can at max be 32 characters !!!
+const collectionName = "TheFirstMan"; //This is used if mutiple collection is needed
+const collectionFamily = "ManNFT"; // Many projects can belong to one family
+const symbol = "FML"; // !!! Symbol can at max be 10 characters !!!
 
 const baseUriPrefix = ""; // OPTIONAL, if you need to prefix your image#.png with a baseURI
-const description = "Default Solana Description";
-const external_url = ""; // add optional external URL here, e.g, https://0n10nDivision.com
+const description = "This could have been a better description, If I knew how to write";
+const external_url = "www.primathon.in"; // add optional external URL here, e.g, https://0n10nDivision.com
 
 const royaltyFee = 200; // This is 2% royalty fee
 
@@ -27,7 +27,7 @@ const royaltyFee = 200; // This is 2% royalty fee
  */
 const creators = [
   {
-    address: "WALLET_ADDRESS", // Wallet address for royalties
+    address: "CwumMpNFmAzq6Bxyidda3QNs1giATZndPv5WNHXyCZtK", // Wallet address for royalties
     share: 100, // Amount of shares for this wallet, can be more than one, all have to add up to 100 together !!! And a maximum of 4 creators !!!
   },
   // uncomment and edit for additional creator.

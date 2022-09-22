@@ -16,8 +16,10 @@ const layersDir = path.join(basePath, "/layers");
  ***********************/
 
 const description =
-  "This is the description of your NFT project, remember to replace this";
-const baseUri = "ipfs://NewUriToReplace";
+  "This could have been a better description, If I knew how to write";
+// const baseUri = "ipfs://NewUriToReplace";
+const baseUri = "";
+
 
 const outputJPEG = false; // if false, the generator outputs png's
 
@@ -41,9 +43,16 @@ const background = {
 const layerConfigurations = [
   {
     growEditionSizeTo: 10,
-    namePrefix: "Series 2", // Use to add a name to Metadata `name:`
+    namePrefix: "First Man", // Use to add a name to Metadata `name:`
     layersOrder: [
       { name: "Background" },
+      { name: "Hair" },
+      { name: "Top" },
+      { name: "Face" },
+      { name: "Mouth" },
+      { name: "Eyes" },
+      { name: "Props" },
+     /*  { name: "Background" },
       {
         name: "Back Accessory",
         // options: {
@@ -55,7 +64,7 @@ const layerConfigurations = [
       { name: "Eyes" },
       { name: "Hair" },
       { name: "Head Accessory" },
-      { name: "Shirt Accessories" },
+      { name: "Shirt Accessories" }, */
     ],
   },
   // {
@@ -93,6 +102,7 @@ const emptyLayerName = "NONE";
  * accidentally set incompatibilities for the _wrong_ item.
  */
 const incompatible = {
+  // Beach: ["Sad"],
   //   Red: ["Dark Long"],
   //   // directory incompatible with directory example
   //   White: ["rare-Pink-Pompadour"],
@@ -117,8 +127,8 @@ const forcedCombinations = {
  * clean-filename: trait-value override pairs. Wrap filenames with spaces in quotes.
  */
 const traitValueOverrides = {
-  Helmet: "Space Helmet",
-  "gold chain": "GOLDEN NECKLACE",
+  // Helmet: "Space Helmet",
+  // "gold chain": "GOLDEN NECKLACE",
 };
 
 const extraMetadata = {};
@@ -127,10 +137,10 @@ const extraAttributes = () => [
   // Optionally, if you need to overwrite one of your layers attributes.
   // You can include the same name as the layer, here, and it will overwrite
   //
-  // {
-  // trait_type: "Bottom lid",
-  //   value: ` Bottom lid # ${Math.random() * 100}`,
-  // },
+  {
+  trait_type: "Hotness",
+    value: `Hotness # ${Math.random() * 100}`,
+  },
   // {
   //   display_type: "boost_number",
   //   trait_type: "Aqua Power",
