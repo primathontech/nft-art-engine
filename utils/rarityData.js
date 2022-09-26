@@ -19,7 +19,7 @@ class Rarity {
     this.trait = traitObj.trait;
     this.chance = traitObj.chance;
     this.occurrence = traitObj.occurrence;
-    this.percentage = `${(this.occurrence / editionSize) * 100} of 100%`;
+    this.percentage = (this.occurrence / editionSize) * 100;
   }
 }
 // read json data
@@ -140,9 +140,10 @@ data.forEach((element) => {
 });
 
 // print out rarity data
+const output = {};
 for (var layer in rarityData) {
   console.log(`Trait type: ${layer}`);
-  const output = {};
+
   for (var trait in rarityData[layer].elements) {
     //   console.table(rarityData[layer].elements[trait]);
     output[rarityData[layer].elements[trait].trait] = new Rarity(
@@ -152,6 +153,8 @@ for (var layer in rarityData) {
   }
   console.table(output, ["chance", "occurrence", "percentage"]);
 }
+
+console.log(JSON.stringify(output));
 
 /**
  * Deep flatten util function for flattening all nested sublayer png's
